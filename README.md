@@ -1,6 +1,5 @@
 # TodoList-ReactJS
 
-Bien sûr ! Voici une suggestion pour la description du README.md et du répertoire :
 
 ---
 
