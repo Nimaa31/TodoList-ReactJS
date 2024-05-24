@@ -1,0 +1,128 @@
+/* Particles should be positioned in the background */
+#particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure particles are in the background */
+}
+
+html {
+  /* background-color: var(--primary-color); */
+}
+
+#root {
+  margin: auto;
+  width: fit-content;
+}
+
+:root {
+  --background-color: #3d4249;
+  --background-color-dark: #353a3f;
+  --background-color-darker: #303338;
+  --paper-color: #494f58;
+  --text-secondary-color: #90969e;
+  --text-primary-color: #ffff;
+
+  --primary-color: #500a50;
+
+  color: var(--text-primary-color);
+}
+
+.app-wrapper {
+  position: relative; /* Ensure the wrapper is positioned relative to the particles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  max-width: 320px;
+  background: var(--background-color);
+  padding: 16px 32px;
+  border-radius: 8px;
+  gap: 16px;
+  z-index: 1; /* Ensure the content is above the particles */
+}
+
+.app-wrapper h1 {
+  margin: 0;
+}
+
+.input {
+  border: 2px solid var(--background-color-darker);
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  background-color: var(--background-color-dark);
+  color: var(--text-primary-color);
+}
+
+.input::placeholder {
+  color: var(--text-secondary-color);
+}
+
+.button {
+  border: 2px solid var(--background-color-darker);
+  margin-left: 7px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  background-color: var(--background-color-dark);
+  color: var(--text-primary-color);
+  cursor: pointer;
+  transition: 100ms background-color ease-in-out, 200ms transform ease;
+}
+
+.button:active {
+  transform: scale(0.95);
+  transition: 100ms background-color ease-in-out, 100ms transform ease;
+}
+
+.form-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  gap: 8px;
+  width: 100%;
+}
+
+.todo-wrapper {
+  display: flex;
+  border-radius: 8px;
+  gap: 8px;
+}
+
+.todo-wrapper > .todo-text {
+  margin-right: auto;
+}
+
+.todo-wrapper > .todo-delete {
+  background: none;
+  border: none;
+  color: #ffff;
+}
+
+.checkbox {
+  border: 2px solid var(--background-color-darker);
+  border-radius: 4px;
+  background-color: var(--background-color-dark);
+  width: 16px;
+  height: 16px;
+  position: relative;
+  color: var(--text-secondary-color);
+}
+
+.checkbox:focus-within {
+  border-color: white;
+}
+
+.checkbox > input {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+}
